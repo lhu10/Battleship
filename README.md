@@ -47,3 +47,5 @@ Creating a simple game of battleship with two players (two terminals running sim
 ---
 
 ## Timeline
+- Reading a file and creating board (1/18)
+- Creating two programs to send and receive between the two players (1/22)
