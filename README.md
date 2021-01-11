@@ -25,7 +25,7 @@ Creating a simple game of battleship with two players (two terminals running sim
   - the boards are generated based on information found in a file
   - the user can edit the file before starting the program 
 - Pipes
-  - named pipes will be used to establish a connection between the two players
+  - named pipes used to establish a connection between the two players
 - Signals
   - when user sends the signal SIGNIT, it means the user surrenders
 
