@@ -2,7 +2,7 @@
 Lucy Hu
 
 ## Problem
-
+Creating a simple game of battleship in the terminal
 
 ---
 
