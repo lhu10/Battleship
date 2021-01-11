@@ -43,7 +43,9 @@ Creating a simple game of battleship with two players (two terminals running sim
   - head of the linked list is the head of the ship
 
 ### Algorithms
-
+- Handshake
+  - ensures a connection has been established between the two players
+  
 ---
 
 ## Timeline
