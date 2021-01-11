@@ -23,6 +23,7 @@ Creating a simple game of battleship with two players (two terminals running sim
 
 ### Breakdown
 - Each player's boards are generated based on a files, containing the coordinates, length, and vertical or horizontal information about the ships
+- Program checks if the information in file doesn't cause any error with formation of board
 - Player 1 and Player 2 see their opponent's board that initially looks blank
 - Player 1 is prompted to input a coordinate to guess the location of one of the ships
 - Program shows whether it was hit or miss
@@ -33,7 +34,13 @@ Creating a simple game of battleship with two players (two terminals running sim
 - Player to first reveal all the ships wins and the game ends
 
 ### Data Structures
-
+- 2D Array
+  - used to represent the board
+  - rows are letters
+  - columns are numbers
+- Linked list
+  - individual parts that form a ship will be linked
+  - head of the linked list is the head of the ship
 
 ### Algorithms
 
