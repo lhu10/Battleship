@@ -31,7 +31,8 @@ Creating a simple game of battleship with two players (two terminals running sim
 
 ### Breakdown
 - Board Generation 
-  - Each player's boards are generated based on a files, containing the coordinates, length, and vertical or horizontal information about the ships
+  - Each player's boards are generated based on a file
+  - file contains the coordinates, length, and vertical or horizontal 
 - Check Board
   - Program checks if the information in file doesn't cause any error with formation of board
 - Display Board 
