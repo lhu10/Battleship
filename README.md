@@ -216,7 +216,7 @@ Returns: N/A
 
 Shows '*' on board since missile hit
 If all components of a ship are hit, changes it all to '#'
-=====================================================*/
+====================================================*/
 
 /*===============int check_win()=====================
 Inputs: char **board
