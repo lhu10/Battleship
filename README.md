@@ -17,6 +17,21 @@ A game of battleship with two players (two terminals running simultanteously)
 ### General
 - Compile with make
 - Run ```./server``` in one terminal
+- Run ```./client``` in another terminal
+- After handshake is completed, player1 (client.c) goes first to input a coordinate
+- Input Coord
+  - general format: RowColumn (as depicted on board display)
+    ex: ```B2```
+  - program checks if coord is valid
+    - if coord is invalid, user is prompt to input another coord
+- player2 (server.c) goes next to input a coordinate
+- game continues as player1 and player2 take turns until
+  - one of them clears all of the other's ships
+  - one of them surrenders
+
+### Surrendering
+
+### Ships Files
 
 ### Class Concepts
 - Allocating memory
