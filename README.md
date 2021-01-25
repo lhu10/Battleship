@@ -61,6 +61,32 @@ A game of battleship with two players (two terminals running simultanteously)
 
 ## Breakdown
 ### Server and Client Communication
-
+- Server and Client do a handshake
+- Server (player2) generates its board
+  - board generation check returns 0 if ships overlap or out of bound
+  - if check returns 0, server exits
+  - sends the check to client (player1) so client can exit too if check returns 0
+- Client (player1) generates its board
+  - Client sends check to Server
+  - server receives check and exits if player1 board generation fails
+- Player1 is prompted to input coord
+  - if player1 inputs ctrl-c, sighandler lets program know player1 surrenders
+  - Client sends surrender check to server 
+  - Server recieves check and exits if player1 surrenders
+- Client sends coord to Server
+- Server recieves coord and launches missile
+  - if coord is invalid, Server sends check to Client
+  - Client recieves check and has to input another coord and sends that to server
+  - Server recieves new coord
+  - this repeats until coord is valid
+- Launching missile gives a copy of player2's board without player2's ships being visible
+- Server sends 1D array of 2D board array to Client
+  - because can't send 2D array through the pipes
+- Client receives 1D array and converts it to 2D array to display
+- Server checks if all of player2's ships have been destroyed
+  - if they were all destroyed, player2 loses and Server exits
+  - Server sends the check to Client
+  - Client receives check and exits if player2 ships were all destroyed and player1 wins
+  
 ### battleship.c
 
