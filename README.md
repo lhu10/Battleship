@@ -21,7 +21,7 @@ A game of battleship with two players (two terminals running simultanteously)
 - After handshake is completed, player1 (client.c) goes first to input a coordinate
 - Input Coord
   - general format: RowColumn (as depicted on board display)
-    ex: ```B2```
+    - ex: ```B2```
   - program checks if coord is valid
     - if coord is invalid, user is prompt to input another coord
 - player2 (server.c) goes next to input a coordinate
