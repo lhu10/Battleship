@@ -1,0 +1,43 @@
+1/14/21
+ - added init_board() to initialize a battleship board using malloc
+ - added free_board() to free the allocated memory of board
+
+1/15/21
+ - added display_board()
+ - created ship_node struct to hold important info of each ship
+
+1/16/21
+ - added generate_board() to generate a board and its ships based on file line by line
+ - added check_board() to check if ships are out of bound or overlap
+
+1/17/21
+ - added launch_missile() to launch missile based on user input coord
+ - added check_downed_ship() to signify when all components of a ship has been hit
+
+1/18/21
+ - added check_win to see if all ships have been cleared 
+ - added signal handler when user does ctrl-c to surrender
+
+1/20/21
+ - created server.c and client.c to establish a connection between player1 and player2
+ - added handshake()
+ - created a general design of the back and forth between player1 and player2 using named pipes
+
+1/21/21
+ - worked on the back and forth between player1 and player2
+ 
+1/22/21
+ - added two_to_one() and one_to_two() because read and write can't pass 2d array
+   - first one converts the 2d array to 1d array and 1d array is passed
+   - when 1d array is passed over, second one converts it to 2d array to display
+
+1/23/21
+ - in server.c and client.c:
+   - added a check for win condition
+   - added a check for invalid coord
+   - added a check for board generation
+
+1/24/21
+ - cleaned up code 
+ - did a final check with various cases
+
