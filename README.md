@@ -1,7 +1,7 @@
 # Battleship
 Lucy Hu
 
-## Broad Description
+## Description
 A game of battleship with two players (two terminals running simultanteously)
 - Each player has their own board with 5 ships (ship placement info is accessed through files)
 - Players take turns to input a coordinate to guess the location of their opponent's ships
