@@ -215,6 +215,7 @@ Inputs: int row
 Returns: N/A
 
 Shows '*' on board since missile hit
+Used in launch_missile()
 If all components of a ship are hit, changes it all to '#'
 ====================================================*/
 
