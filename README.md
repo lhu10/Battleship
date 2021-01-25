@@ -78,17 +78,17 @@ A game of battleship with two players (two terminals running simultanteously)
 - Player1 is prompted to input coord
   - surrender check
     - if player1 inputs ctrl-c, sighandler lets program know player1 surrenders
-    - Client sends surrender check to server 
+    - Client sends surrender check to Server 
     - Server recieves check and exits if player1 surrenders
 - Client sends coord to Server
 - Server recieves coord and launches missile
   - coord check
     - if coord is invalid, Server sends check to Client
-    - Client recieves check and has to input another coord and sends that to server
+    - Client recieves check and has to input another coord and sends that to Server
     - Server recieves new coord
     - this repeats until coord is valid
-- Launching missile gives a copy of player2's board without player2's ships being visible
-- Server sends 1D array of copy of player2's board 2D array to Client
+- Launching missile gives a *copy of player2's board* without player2's ships being visible
+- Server sends 1D array of *copy of player2's board* 2D array to Client
   - because can't send 2D array through the pipes
 - Client receives 1D array and converts it to 2D array to display
 - Server checks if all of player2's ships have been destroyed
@@ -99,7 +99,27 @@ A game of battleship with two players (two terminals running simultanteously)
 #### End of Player1's Turn
 
 #### Start of Player2's Turn
-
+- Player2 is prompted to input coord
+  - surrender check
+    - if player2 inputs ctrl-c, sighandler lets program know player2 surrenders
+    - Server sends surrender check to Client
+    - Client recieves check and exits if player2 surrenders
+- Server sends coord to Client
+- Client recieves coord and launches missile
+  - coord check
+    - if coord is invalid, Client sends check to Server
+    - Server recieves check and has to input another coord and sends that to Client
+    - Client recieves new coord
+    - this repeats until coord is valid
+- Launching missile gives a *copy of player1's board* without player1's ships being visible
+- Client sends 1D array of *copy of player1's board* 2D array to Server
+  - because can't send 2D array through the pipes
+- Server receives 1D array and converts it to 2D array to display
+- Client checks if all of player1's ships have been destroyed
+  - win check 
+    - if they were all destroyed, player1 loses and Client exits
+    - Client sends the check to Server
+    - Server receives check and exits if player1 ships were all destroyed and player2 wins
 #### End of Player2's Turn
 
 - Repeats until surrender check or win check is fulfilled
