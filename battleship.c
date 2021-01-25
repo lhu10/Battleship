@@ -111,7 +111,7 @@ int launch_missile(char *coord, char **board, char **sboard, struct ship_node *s
             //if coord matches head of ship coords
             if(row == ships[i].row && column == ships[i].column){
                 boolean = 1; 
-            } //separate into function
+            } 
             else if((row == ships[i].row &&
                     abs(ships[i].column - column) < ships[i].size &&
                     ships[i].direction == 'h' &&
