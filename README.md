@@ -50,7 +50,8 @@ A game of battleship with two players (two terminals running simultanteously)
     3vH8
     2hG2
     ```
-   
+- Files can be edited before running ```./server``` and ```./client```
+
 ### Class Concepts
 - Allocating memory
   - memory is allocated for each player's boards and ship placements
