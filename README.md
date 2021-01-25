@@ -8,8 +8,8 @@ A game of battleship with two players (two terminals running simultanteously)
   - hit or miss is shown on their board
   - ship is revealed when all components of it has been hit
 - Game ends when:
-  - a player surrenders with SIGINT
-  - first player to clear all of their opponent's ships win
+  - a player surrenders 
+  - first player to clear all of their opponent's ships wins
   
 ---
 
