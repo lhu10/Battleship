@@ -67,11 +67,12 @@ A game of battleship with two players (two terminals running simultanteously)
 #### Board Generation
 - Server (player2) generates its board
   - board generation check
-    - check if board generation failed because ships overlap or out of bound
+    - if board generation failed because ships overlap or out of bound, Server exits
     - Server sends check to Client
     - Client receives check and exits too if player2 board generation fails
 - Client (player1) generates its board
   - board generation check 
+    - if board generation failed, Client exits
     - Client sends check to Server
     - Server receives check and exits too if player1 board generation fails
   
