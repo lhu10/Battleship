@@ -27,7 +27,8 @@ A game of battleship with two players (two terminals running simultanteously)
 - Symbols
   - hit ```*```
   - miss ```O```
-  - All components of a ship destroyed ```#```
+  - your ship ```$```
+  - all components of a ship destroyed ```#```
 - player2 (server.c) goes next to input a coordinate
 - game continues as player1 and player2 take turns until
   - one of them clears all of the other's ships
