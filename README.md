@@ -97,7 +97,7 @@ A game of battleship with two players (two terminals running simultanteously)
     - Server sends the check to Client
     - Client receives check and exits if player2 ships were all destroyed and player1 wins
 #### End of Player1's Turn
---
+
 #### Start of Player2's Turn
 - Player2 is prompted to input coord
   - surrender check
