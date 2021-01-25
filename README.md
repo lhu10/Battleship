@@ -69,18 +69,18 @@ A game of battleship with two players (two terminals running simultanteously)
   - board generation check
     - check if board generation failed because ships overlap or out of bound
     - Server sends check to Client
-    - Client receives check and exits if player2 board generation fails
+    - Client receives check and exits too if player2 board generation fails
 - Client (player1) generates its board
   - board generation check 
     - Client sends check to Server
-    - Server receives check and exits if player1 board generation fails
+    - Server receives check and exits too if player1 board generation fails
   
 #### Start of Player1's Turn
 - Player1 is prompted to input coord
   - surrender check
     - if player1 inputs ctrl-c, sighandler lets program know player1 surrenders
     - Client sends surrender check to Server 
-    - Server recieves check and exits if player1 surrenders
+    - Server recieves check and exits too if player1 surrenders
 - Client sends coord to Server
 - Server recieves coord and launches missile
   - coord check
@@ -96,7 +96,7 @@ A game of battleship with two players (two terminals running simultanteously)
   - win check 
     - if they were all destroyed, player2 loses and Server exits
     - Server sends the check to Client
-    - Client receives check and exits if player2 ships were all destroyed and player1 wins
+    - Client receives check and exits too if player2 ships were all destroyed and player1 wins
 #### End of Player1's Turn
 
 #### Start of Player2's Turn
@@ -104,7 +104,7 @@ A game of battleship with two players (two terminals running simultanteously)
   - surrender check
     - if player2 inputs ctrl-c, sighandler lets program know player2 surrenders
     - Server sends surrender check to Client
-    - Client recieves check and exits if player2 surrenders
+    - Client recieves check and exits too if player2 surrenders
 - Server sends coord to Client
 - Client recieves coord and launches missile
   - coord check
@@ -120,7 +120,7 @@ A game of battleship with two players (two terminals running simultanteously)
   - win check 
     - if they were all destroyed, player1 loses and Client exits
     - Client sends the check to Server
-    - Server receives check and exits if player1 ships were all destroyed and player2 wins
+    - Server receives check and exits too if player1 ships were all destroyed and player2 wins
 #### End of Player2's Turn
 
 - Repeats until surrender check or win check is fulfilled
