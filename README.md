@@ -64,12 +64,3 @@ A game of battleship with two players (two terminals running simultanteously)
 
 ### battleship.c
 
-### Class Concepts
-- Allocating memory
-  - memory is allocated for each player's boards 
-- Working with files
-  - the boards are generated based on information found in a file 
-- Pipes
-  - named pipes used to establish a connection between the two players
-- Signals
-  - when user sends the signal SIGNIT, it means the user surrenders and pipes are unlinked to disconnect
