@@ -13,17 +13,10 @@ A game of battleship with two players (two terminals running simultanteously)
   
 ---
 
-## Description
-### User Interface 
-- Two terminals (one for each player)
-- Player 1 and Player 2 see their opponent's board that initially looks blank
-- Player 1 is prompted to input a coordinate to guess the location of one of the ships
-- Program shows whether it was hit or miss
-  - ship is fully revealed when it has all been hit
-- Player 2, who was waiting for Player 1, is now prompted to input a coordinate 
-- Program shows whether it was hit or miss
-- the back and forth continues until one player reveals all the ships
-- Player to first reveal all the ships wins and the game ends
+## Instructions
+### General
+- Compile with make
+- Run ```./server``` in one terminal
 
 ### Class Concepts
 - Allocating memory
