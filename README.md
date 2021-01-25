@@ -1,9 +1,16 @@
 # Battleship
 Lucy Hu
 
-## Problem
-Creating a simple game of battleship with two players (two terminals running simultaneously)
-
+## Broad Description
+A game of battleship with two players (two terminals running simultanteously)
+- Each player has their own board with 5 ships (ship placement info is accessed through files)
+- Players take turns to input a coordinate to guess the location of their opponent's ships
+  - hit or miss is shown on their board
+  - ship is revealed when all components of it has been hit
+- Game ends when:
+  - a player surrenders with SIGINT
+  - first player to clear all of their opponent's ships win
+  
 ---
 
 ## Description
