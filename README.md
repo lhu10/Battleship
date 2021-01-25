@@ -27,6 +27,7 @@ A game of battleship with two players (two terminals running simultanteously)
 - Symbols
   - hit ```*```
   - miss ```O```
+  - empty ```.```
   - your ship ```$```
   - all components of a ship destroyed ```#```
 - player2 (server.c) goes next to input a coordinate
@@ -125,4 +126,89 @@ A game of battleship with two players (two terminals running simultanteously)
 - Repeats until surrender check or win check is fulfilled
   
 ### battleship.c
+- handles all functions for battleship 
+```
+/*==============struct ship_node===================
+Struct members: int size
+                int lives
+                char direction
+                int row
+                int column
+                
+Holds information of size of each ship, the number of lives, 
+direction (horizontal or vertical), row and column of the
+head of the ship
+===================================================*/
+
+/*==============char **init_board()================
+Inputs: N/A
+Returns: 2D char array
+
+Creates an empty 10x10 board and allocates memory for it
+==================================================*/
+
+/*===============void free_board()=================
+Inputs: char **board
+Returns: N/A
+
+Frees the allocated memory from the 2D board array
+==================================================*/
+
+/*===============int generate_board()===============
+Inputs: char *player
+        char **board
+        struct ship_node *ships
+Returns: int to show if board generation failed
+
+Generates battleship board with ships placements based on
+a file, reading each ship line by line
+Returns 0 if board generation failed (ships overlap or out
+of bound)
+Returns 1 if board generation was sucessful
+====================================================*/
+
+/*===============int check_board()===================
+Inputs: int r
+        int r_inc
+        int c
+        int c_inc
+        char **board
+Returns: int to show if ships overlap or out of bound
+
+Returns 0 if ships overlap or out of bound
+Returns 1 if no errors
+====================================================*/
+
+/*================void new_ship()====================
+Inputs: struct ship_node *ships
+        char *line
+        int i
+Returns: N/A
+
+Creates a new ship to hold information based on file line 
+by line
+Used in generate_board()
+====================================================*/
+
+/*===============int launch_missile()================
+Inputs: char *coord
+        char **board
+        char **sboard
+        struct ship_node *ships
+Returns: int to show if coord is valid point
+
+Launches missile to coord
+Shows * if it's a hit and decreases life by 1
+      O if it's a miss
+Returns 0 if coord is out of bounds or invalid
+Returns 1 if missile launch was successful
+====================================================*/
+void check_downed_ship(int row, int column, int i, char **board, char **sboard, struct ship_node *ships);
+int check_win(char **board, struct ship_node *ships);
+
+void display_board(char **board);
+
+char *two_to_one(char **board);
+void one_to_two(char *arr, char **board);
+void end_prog(char *arr, char **board, char **board1, char **board2);
 
