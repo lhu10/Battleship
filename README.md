@@ -195,20 +195,70 @@ Inputs: char *coord
         char **board
         char **sboard
         struct ship_node *ships
-Returns: int to show if coord is valid point
+Returns: int to show if missile launch failed
 
 Launches missile to coord
-Shows * if it's a hit and decreases life by 1
-      O if it's a miss
+If it's a hit, decrease ship's lives by 1
+If it's a miss, show 'O' on board
+char **sboard is a copy of char **board without visible ships
 Returns 0 if coord is out of bounds or invalid
 Returns 1 if missile launch was successful
 ====================================================*/
-void check_downed_ship(int row, int column, int i, char **board, char **sboard, struct ship_node *ships);
-int check_win(char **board, struct ship_node *ships);
 
-void display_board(char **board);
+/*==============void check_downed_ship()=============
+Inputs: int row
+        int column
+        int i
+        char **board
+        char **sboard
+        struct ship_node *ships
+Returns: N/A
 
-char *two_to_one(char **board);
-void one_to_two(char *arr, char **board);
-void end_prog(char *arr, char **board, char **board1, char **board2);
+Shows '*' on board since missile hit
+If all components of a ship are hit, changes it all to '#'
+=====================================================*/
+
+/*===============int check_win()=====================
+Inputs: char **board
+        struct ship_node *ships
+Returns: int if all ships have been cleared
+
+Checks if lives of all ships are 0
+Returns 1 if all ships cleared
+Returns 0 if ships still remaining
+====================================================*/
+
+/*===============void display_board()================
+Inputs: char **board
+Returns: N/A
+
+Displays the 10x10 board 2D array
+Rows are letters (A-J)
+Columns are numbers (1-10)
+====================================================*/
+
+/*===============char *two_to_one()==================
+Inputs: char **board
+Returns: char array
+
+Converts 2D array to 1D array
+====================================================*/
+
+/*===============void one_to_two()===================
+Inputs: char *arr
+        char **board
+Returns: N/A
+
+Converts 1D array to 2D array
+====================================================*/
+
+/*===============void end_prog()=====================
+Inputs: char *arr
+        char **board
+        char **board1
+        char **board2
+Returns: N/A
+
+Frees everything and exits
+====================================================*/
 
