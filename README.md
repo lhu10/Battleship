@@ -78,7 +78,7 @@ A game of battleship with two players (two terminals running simultanteously)
 #### Start of Player1's Turn
 - Player1 is prompted to input coord
   - surrender check
-    - if player1 inputs ctrl-c, sighandler lets program know player1 surrenders
+    - if player1 inputs ctrl-c, sighandler lets Client know player1 surrenders and exits
     - Client sends surrender check to Server 
     - Server recieves check and exits too if player1 surrenders
 - Client sends coord to Server
@@ -102,7 +102,7 @@ A game of battleship with two players (two terminals running simultanteously)
 #### Start of Player2's Turn
 - Player2 is prompted to input coord
   - surrender check
-    - if player2 inputs ctrl-c, sighandler lets program know player2 surrenders
+    - if player2 inputs ctrl-c, sighandler lets Server know player2 surrenders and exits
     - Server sends surrender check to Client
     - Client recieves check and exits too if player2 surrenders
 - Server sends coord to Client
